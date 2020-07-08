@@ -1,0 +1,11 @@
+
+
+.avatar {
+    width: 64px;
+    height: 64px;
+    background-color: #eee;
+}
+
+.user {
+    border-bottom: solid 1px #eee;
+}

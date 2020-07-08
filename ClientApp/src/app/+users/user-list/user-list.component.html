@@ -1,0 +1,18 @@
+<div class="d-flex justify-content-between align-items-center my-4">
+  <h2>Users</h2>
+  <a class="nav-link" [routerLink]="['new']">Add User</a>
+</div>
+<ng-container *ngIf="users$ | withLoading | async as users">
+    <ng-template [ngIf]="users.loading">Loading...</ng-template>
+    <ng-template [ngIf]="users.value">
+        <div class="media user mb-2 pb-2" *ngFor="let user of users.value">
+            <img src="https://i.pravatar.cc/64?u={{user.email}}" class="align-self-start mr-3 rounded-circle avatar" alt="{{user.firstName}} {{user.lastName}}">
+            <div class="media-body">
+                <h5 class="mt-0">{{user.firstName}} {{user.lastName}}</h5>
+                <p class="my-0">{{user.email}}</p>
+                <p class="my-0">{{user.phone}}</p>
+            </div>
+        </div>
+    </ng-template>
+    <ng-template [ngIf]="users.error">Error {{ users.error?.statusText }}</ng-template>
+</ng-container>

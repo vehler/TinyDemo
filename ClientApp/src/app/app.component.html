@@ -1,0 +1,7 @@
+<app-nav-menu [title]="title" [user]="authUser" (onLogout)="logout()"></app-nav-menu>
+
+<div class="container">
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>
+
+<app-footer></app-footer>
