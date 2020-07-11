@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthenticationService } from '@app/shared';
+import { AuthenticationService } from '@app/shared/services/authentication.service';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   public ngOnInit(): void {
     this.authService.user
       .subscribe(user => {
-        this.visitorName = user.firstName;
+        this.visitorName = user?.firstName;
       });
   }
 
