@@ -1,3 +1,5 @@
+@import 'assets/theme/theme';
+
 html {
   font-size: 14px;
   min-height: 100vh;
@@ -10,10 +12,6 @@ body {
   align-items: center;
 }
 
-app-root {
-  display: block;
-}
-
 @media (min-width: 768px) {
   html {
     font-size: 16px;
@@ -21,17 +19,13 @@ app-root {
 }
 
 a {
-  color: #0366d6;
-}
-
-code {
-  color: #e01a76;
+  color: $alt-1-700;
 }
 
 .btn-primary {
   color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+  background-color:$alt-1-600;
+  border-color: $alt-1-600;
 }
 
 
