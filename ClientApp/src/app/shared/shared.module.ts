@@ -1,22 +1,23 @@
-import { NgModule, APP_INITIALIZER } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RouterModule, Router } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
-import {
-  appInitializer,
-  WithLoadingPipe, NavMenuComponent,
-  JwtInterceptor, ErrorInterceptor,
-  AuthenticationService
-} from './';
-import { FooterComponent } from './components/footer/footer.component';
+import { AppInitializerProvider, JWTInterceptorProvider, ErrorInterceptorProvider } from './helpers/app.providers';
+
+import { WithLoadingPipe } from './pipes/with-loading.pipe';
+import { NavMenuComponent, FooterComponent,  ShellComponent } from '@app/shared/components';
+
+
+
 
 @NgModule({
   declarations: [
     NavMenuComponent,
     WithLoadingPipe,
-    FooterComponent
+    FooterComponent,
+    ShellComponent
   ],
   imports: [
     CommonModule,
@@ -32,14 +33,15 @@ import { FooterComponent } from './components/footer/footer.component';
     FormsModule,
     ReactiveFormsModule,
 
+    ShellComponent,
     NavMenuComponent,
     WithLoadingPipe,
     FooterComponent
   ],
   providers: [
-    { provide: APP_INITIALIZER, useFactory: appInitializer, multi: true, deps: [AuthenticationService] },
-    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
-    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+    AppInitializerProvider,
+    JWTInterceptorProvider,
+    ErrorInterceptorProvider
   ],
 
 })

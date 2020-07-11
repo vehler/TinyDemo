@@ -1,6 +1,15 @@
 
 html {
   font-size: 14px;
+  min-height: 100vh;
+}
+
+body {
+  min-height: 100vh;
+}
+
+app-root {
+  display: block;
 }
 
 @media (min-width: 768px) {

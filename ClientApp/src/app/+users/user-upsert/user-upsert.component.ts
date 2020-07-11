@@ -2,15 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
-import { AuthenticationService } from '@app/shared';
 import { first } from 'rxjs/operators';
+
 import { UserService } from '../user.service';
 import { User } from '..';
 
 @Component({
   selector: 'app-user-upsert',
   templateUrl: './user-upsert.component.html',
-  styleUrls: ['./user-upsert.component.css']
+  styleUrls: ['./user-upsert.component.scss']
 })
 export class UserUpsertComponent implements OnInit {
 
