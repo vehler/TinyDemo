@@ -8,6 +8,7 @@ import { AppInitializerProvider, JWTInterceptorProvider, ErrorInterceptorProvide
 
 import { WithLoadingPipe } from './pipes/with-loading.pipe';
 import { NavMenuComponent, FooterComponent,  ShellComponent } from '@app/shared/components';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 
 
@@ -17,7 +18,8 @@ import { NavMenuComponent, FooterComponent,  ShellComponent } from '@app/shared/
     NavMenuComponent,
     WithLoadingPipe,
     FooterComponent,
-    ShellComponent
+    ShellComponent,
+    NotFoundComponent
   ],
   imports: [
     CommonModule,
@@ -36,7 +38,8 @@ import { NavMenuComponent, FooterComponent,  ShellComponent } from '@app/shared/
     ShellComponent,
     NavMenuComponent,
     WithLoadingPipe,
-    FooterComponent
+    FooterComponent,
+    NotFoundComponent
   ],
   providers: [
     AppInitializerProvider,

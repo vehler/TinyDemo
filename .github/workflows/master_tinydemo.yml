@@ -4,7 +4,7 @@
 name: Build and deploy ASP.Net Core app to Azure Web App - tinydemo
 
 on:
-  push:
+  pull_request:
     branches:
       - master
 
@@ -32,4 +32,4 @@ jobs:
         app-name: 'tinydemo'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_84e8c12b18e9411f97152630552a4d38 }}
-        package: ${{env.DOTNET_ROOT}}/myapp 
+        package: ${{env.DOTNET_ROOT}}/myapp
