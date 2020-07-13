@@ -4,4 +4,4 @@ This project is a work in progress to practice and display my development skills
 
 ## Deployment
 
-This demo project has a basic CI/CD pipeline to be deployed to azuresites. You can see it running on [https://tinydemo.azurewebsites.net/](https://tinydemo.azurewebsites.net/).
+This demo project has a basic CI/CD pipeline to be deployed to azuresites. You can see it running on [https://tinydemo.azurewebsites.net/](https://tinydemo.azurewebsites.net/){:target="_blank"}.
