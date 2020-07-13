@@ -27,8 +27,8 @@ const routes: Routes = [
     path: 'login',
     component: LoginComponent
   },
-  // otherwise redirect to home
-  { path: '**', component: NotFoundComponent }
+  { path: 'not-found', component: NotFoundComponent },
+  { path: '**', redirectTo: '/not-found' }
 ];
 
 @NgModule({
