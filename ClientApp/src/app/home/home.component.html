@@ -6,6 +6,14 @@
   <li><a href='http://getbootstrap.com/'>Bootstrap</a> for layout and styling</li>
 </ul>
 <h2>Example Routes</h2>
-<p>
-  This <a [routerLink]="['thisroutedoesntexists']">route</a> doesn't exists and if you click it redirects to the not found page.
-</p>
+<ul>
+  <li>
+    <strong>See all users:</strong> You can see a list of users from the DB <a [routerLink]="['users']">here</a> (same link as the nav above)
+  </li>
+  <li>
+    <strong>Not found route:</strong> This <a [routerLink]="['thisroutedoesntexists']">route</a> doesn't exists and if you click it should redirect to the not found page.
+  </li>
+  <li>
+    <strong>Server error when loading:</strong> This is a <a href="#">page with server error <i>in progress</i></a>
+  </li>
+</ul>
